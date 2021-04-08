@@ -1,0 +1,16 @@
+h1, h2 {
+  font-family: Lato;
+}
+
+img {
+  width: 50vw;
+  height: auto;
+}
+
+.hide {
+  display: none;
+}
+
+div:hover > .hide {
+  display: block;
+}
