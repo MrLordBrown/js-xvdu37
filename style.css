@@ -14,6 +14,6 @@ img {
 body {
   display: flex;
   justify-content: center;
-  align-content: center;
-  justify-items: center;
+  align-content: flex-start;
+  justify-items: start;
 }
