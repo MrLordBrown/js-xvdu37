@@ -277,19 +277,21 @@ function update() {
     var crassy = document. createAttribute('class');
     var cont = document.createElement('div')
     var brek = document.createElement('br');
+    var brak = document.createElement('br');
     names.textContent = mine[i].Building;
     weeks.textContent = "Week: "+mine[i].Week;
     srcs.value = mine[i].Image;
     crass.value = 'hide';
     crassy.value = 'hide';
-    weeks.setAttributeNode(crassy);
-    imgs.setAttributeNode(crass);
+    names.setAttributeNode(crassy);
+    weeks.setAttributeNode(crass);
     imgs.setAttributeNode(srcs);
     cont.appendChild(names);
+    cont.appendChild(brak);
     cont.appendChild(weeks);
     cont.appendChild(imgs);
-    cont.appendChild(brek);
     appDiv.appendChild(cont);
+    appDiv.appendChild(brek);
     console.log(mine[i].Week);
     }
 }

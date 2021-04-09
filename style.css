@@ -1,18 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 h1, h2 {
   font-family: Lato;
 }
 
 img {
-  width: 50vw;
-  height: auto;
+  width: auto;
+  height: 25vh;
+  margin-left: 50vw;
 }
 
 .hide {
   display: none;
-  padding: 5vw;
 }
 
 div:hover > .hide {
   display: block;
-  float: inline-start;
+  float: left;
 }
