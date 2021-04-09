@@ -13,4 +13,5 @@ img {
 
 div:hover > .hide {
   display: block;
+  float: left;
 }
