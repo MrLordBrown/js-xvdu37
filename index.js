@@ -266,20 +266,21 @@ var mine = [
   }
 ]
 var count = Object.keys(mine).length;
-function update() {
+function start() {
   console.log(count);
     var names = document.createElement('h1');
     var weeks = document.createElement('h2');
     var imgs = document.createElement('img');
     var srcs = document.createAttribute('src');
     var cont = document.createElement('div')
-    var id = document.createAttribute('id');
-    id.textContent = "current";
+    cont.id = "current";
+    names.id = "title";
+    imgs.id = "img";
+    weeks.id="weeks";
     names.textContent = mine[slide].Building;
     weeks.textContent = "Week: "+mine[slide].Week;
     srcs.value = mine[slide].Image;
     imgs.setAttributeNode(srcs);
-    cont.setAttributeNode(id);
     cont.appendChild(names);
     cont.appendChild(weeks);
     cont.appendChild(imgs);
@@ -287,14 +288,40 @@ function update() {
     console.log(mine[slide].Week);
     }
 
-update();
+function update() {
+  var names = document.getElementById('title');
+  var weeks = document.getElementById('weeks');
+var imgs = document.getElementById('img');
+var cont = document.getElementById('current');
+var srcs = document.createAttribute('src');
+   var names2 = document.createElement('h1');
+    var weeks2 = document.createElement('h2');
+    var imgs2 = document.createElement('img');
+    var srcs = document.createAttribute('src');
+    var cont2 = document.createElement('div')
+    names2.textContent = mine[slide].Building;
+    weeks2.textContent = "Week: "+mine[slide].Week;
+    srcs.value = mine[slide].Image;
+    cont2.id = "current";
+    names2.id = "title";
+    imgs2.id = "img";
+    weeks2.id="weeks";
+     imgs2.setAttributeNode(srcs);
+    cont.replaceChild(names2,names);
+    cont.replaceChild(weeks2,weeks);
+    cont.replaceChild(imgs2,imgs);
+    appDiv.appendChild(cont2,cont);
+    console.log(mine[slide].Week);
+    }
+
+
+start();
 
 function back() {
   slide--
   if (slide <0) {
     slide = count-1;
   }
-  remove();
   update();
 }
 
@@ -303,7 +330,6 @@ function forward() {
   if (slide > count-1) {
     slide = 0;
   }
-  remove();
   update();
 }
 
