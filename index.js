@@ -276,6 +276,7 @@ function update() {
     var crass = document.createAttribute('class');
     var crassy = document. createAttribute('class');
     var cont = document.createElement('div')
+    var brek = document.createElement('br');
     names.textContent = mine[i].Building;
     weeks.textContent = "Week: "+mine[i].Week;
     srcs.value = mine[i].Image;
@@ -287,6 +288,7 @@ function update() {
     cont.appendChild(names);
     cont.appendChild(weeks);
     cont.appendChild(imgs);
+    cont.appendChild(brek);
     appDiv.appendChild(cont);
     console.log(mine[i].Week);
     }

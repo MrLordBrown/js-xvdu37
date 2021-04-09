@@ -9,9 +9,10 @@ img {
 
 .hide {
   display: none;
+  padding: 5vw;
 }
 
 div:hover > .hide {
   display: block;
-  float: left;
+  float: inline-start;
 }
