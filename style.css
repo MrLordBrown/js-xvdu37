@@ -9,14 +9,10 @@ h1, h2 {
 img {
   width: auto;
   height: 25vh;
-  margin-left: 50vw;
 }
 
-.hide {
-  display: none;
-}
-
-div:hover > .hide {
-  display: block;
-  float: left;
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }

@@ -3,6 +3,7 @@ import './style.css';
 
 // Write Javascript code!
 const appDiv = document.getElementById('app');
+var slide = 0;
 
 var mine = [
   {
@@ -264,35 +265,44 @@ var mine = [
     "Image": "https://raw.githubusercontent.com/MrLordBrown/bbbcbcphotos/master/w26h.png.png"
   }
 ]
-
+var count = Object.keys(mine).length;
 function update() {
-  var count = Object.keys(mine).length;
   console.log(count);
-  for (var i in mine) {
     var names = document.createElement('h1');
     var weeks = document.createElement('h2');
     var imgs = document.createElement('img');
     var srcs = document.createAttribute('src');
-    var crass = document.createAttribute('class');
-    var crassy = document. createAttribute('class');
     var cont = document.createElement('div')
-    var brek = document.createElement('br');
-    var brak = document.createElement('br');
-    names.textContent = mine[i].Building;
-    weeks.textContent = "Week: "+mine[i].Week;
-    srcs.value = mine[i].Image;
-    crass.value = 'hide';
-    crassy.value = 'hide';
-    names.setAttributeNode(crassy);
-    weeks.setAttributeNode(crass);
+    names.textContent = mine[slide].Building;
+    weeks.textContent = "Week: "+mine[slide].Week;
+    srcs.value = mine[slide].Image;
     imgs.setAttributeNode(srcs);
     cont.appendChild(names);
-    cont.appendChild(brak);
     cont.appendChild(weeks);
     cont.appendChild(imgs);
     appDiv.appendChild(cont);
-    appDiv.appendChild(brek);
-    console.log(mine[i].Week);
+    console.log(mine[slide].Week);
     }
-}
+
 update();
+
+function back() {
+  slide--
+  if (slide <0) {
+    slide = count-1;
+  }
+  update();
+}
+
+function forward() {
+  slide++
+  if (slide > count-1) {
+    slide = 0;
+  }
+  update();
+}
+
+var backer = document.getElementById('left');
+var fronter = document.getElementById('right');
+backer.addEventListener('click',back);
+fronter.addEventListener('click',forward);
