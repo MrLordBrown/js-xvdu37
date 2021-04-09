@@ -273,10 +273,13 @@ function update() {
     var imgs = document.createElement('img');
     var srcs = document.createAttribute('src');
     var cont = document.createElement('div')
+    var id = document.createAttribute('id');
+    id.textContent = "current";
     names.textContent = mine[slide].Building;
     weeks.textContent = "Week: "+mine[slide].Week;
     srcs.value = mine[slide].Image;
     imgs.setAttributeNode(srcs);
+    cont.setAttributeNode(id);
     cont.appendChild(names);
     cont.appendChild(weeks);
     cont.appendChild(imgs);
@@ -291,6 +294,7 @@ function back() {
   if (slide <0) {
     slide = count-1;
   }
+  remove();
   update();
 }
 
@@ -299,6 +303,7 @@ function forward() {
   if (slide > count-1) {
     slide = 0;
   }
+  remove();
   update();
 }
 
