@@ -1,4 +1,5 @@
-                          CCCCCCCCC                                                     CC      CCCCCCCCXZ                                                                                                                                                                                                                                                                                                                                                               zdy');
+import './style.css';
+
 var slide = 0;
 
 var mine = [
