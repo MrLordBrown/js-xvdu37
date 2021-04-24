@@ -1,8 +1,4 @@
-                                                                                                                                 // Import stylesheets
-import './style.css';
-
-// Write Javascript code!
-const appDiv = document.getElementById('app');
+                          CCCCCCCCC                                                     CC      CCCCCCCCXZ                                                                                                                                                                                                                                                                                                                                                               zdy');
 var slide = 0;
 
 var mine = [
@@ -270,10 +266,7 @@ function start() {
   console.log(count);
     var names = document.createElement('h1');
     var weeks = document.createElement('h2');
-    var imgs = document.createElement('img');
     var srcs = document.createAttribute('src');
-    var cont = document.createElement('div')
-    cont.id = "current";
     names.id = "title";
     imgs.id = "img";
     weeks.id="weeks";
@@ -281,7 +274,7 @@ function start() {
     weeks.textContent = "Week: "+mine[slide].Week;
     srcs.value = mine[slide].Image;
     imgs.setAttributeNode(srcs);
-    cont.appendChild(names);
+    .appendChild(names);
     cont.appendChild(weeks);
     cont.appendChild(imgs);
     appDiv.appendChild(cont);
