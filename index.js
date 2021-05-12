@@ -267,15 +267,10 @@ function start() {
   console.log(count);
     var names = document.createElement('h1');
     var weeks = document.createElement('h2');
+    var imgs = document.getElementById('img');
     var srcs = document.createAttribute('src');
-    names.id = "title";
-    imgs.id = "img";
-    weeks.id="weeks";
-    names.textContent = mine[slide].Building;
-    weeks.textContent = "Week: "+mine[slide].Week;
-    srcs.value = mine[slide].Image;
     imgs.setAttributeNode(srcs);
-    .appendChild(names);
+    cont.appendChild(names);
     cont.appendChild(weeks);
     cont.appendChild(imgs);
     appDiv.appendChild(cont);
